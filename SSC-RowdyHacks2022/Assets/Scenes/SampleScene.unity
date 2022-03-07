@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 962392351}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962392346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -324,6 +324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399223e9e99b2834e99017ef7532fee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 1074039644141574151, guid: dc61d562e83c85440ad5f0a3f41511d5, type: 3}
+  startProjectile: {fileID: 962392350}
+  projSpeed: 375
   leftRightMovement: 0
   upDownMovement: 0
   playerSpeed: 5
@@ -379,7 +382,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
