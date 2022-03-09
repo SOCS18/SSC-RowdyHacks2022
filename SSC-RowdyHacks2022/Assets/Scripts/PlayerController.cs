@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
             GameObject bullet;
             bullet = Instantiate(projectile, startProjectile.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * projSpeed);
+            bullet.GetComponent<Rigidbody>().AddForce(transform.right * projSpeed);
         }
 
     }
