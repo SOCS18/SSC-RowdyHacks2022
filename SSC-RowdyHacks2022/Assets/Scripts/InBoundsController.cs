@@ -22,14 +22,22 @@ public class InBoundsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.transform.position);
+        //Debug.Log(player.transform.position);
         if (player.transform.position.x > screenWidth)
         {
-            Debug.Log("You're out of bounds");
+            player.transform.position = new Vector3(screenWidth, player.transform.position.y, player.transform.position.z);
         }
         if (player.transform.position.z > screenHeight)
         {
-            Debug.Log("You're out of bounds");
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, screenHeight);
+        }
+        if (player.transform.position.x < -screenWidth)
+        {
+            player.transform.position = new Vector3(-screenWidth, player.transform.position.y, player.transform.position.z);
+        }
+        if (player.transform.position.z < -screenHeight)
+        {
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -screenHeight);
         }
     }
 }
