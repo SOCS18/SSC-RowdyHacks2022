@@ -23,7 +23,6 @@ public class InBoundsController : MonoBehaviour
     void Update()
     {
         //Debug.Log(player.transform.position);
-        /*
         if (player.transform.position.x > screenWidth)
         {
             player.transform.position = new Vector3(screenWidth, player.transform.position.y, player.transform.position.z);
@@ -40,6 +39,5 @@ public class InBoundsController : MonoBehaviour
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -screenHeight);
         }
-        */
     }
 }
