@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InBoundsController : MonoBehaviour
 {
-    public Camera mainCam;
     public GameObject player;
     [SerializeField] private float screenWidth = 8.3f;
     [SerializeField] private float screenHeight = 4.4f;
@@ -14,31 +13,30 @@ public class InBoundsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
-        playerXPos = player.transform.position.x;
-        playerZPos = player.transform.position.z;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(player.transform.position);
+        playerXPos = player.transform.position.x;
+        playerZPos = player.transform.position.z;
+
         if (playerXPos > screenWidth)
         {
-            player.transform.position = new Vector3(screenWidth, player.transform.position.y, playerZPos);
+            player.transform.position = new Vector3(screenWidth, player.transform.position.y, player.transform.position.z);
         }
         if (playerZPos > screenHeight)
         {
-            player.transform.position = new Vector3(playerXPos, player.transform.position.y, screenHeight);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, screenHeight);
         }
         if (playerXPos < -screenWidth)
         {
-            player.transform.position = new Vector3(-screenWidth, player.transform.position.y, playerZPos);
+            player.transform.position = new Vector3(-screenWidth, player.transform.position.y, player.transform.position.z);
         }
         if (playerZPos < -screenHeight)
         {
-            player.transform.position = new Vector3(playerXPos, player.transform.position.y, -screenHeight);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -screenHeight);
         }
     }
 }
