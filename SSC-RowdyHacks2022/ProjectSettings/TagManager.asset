@@ -8,6 +8,7 @@ TagManager:
   - FPSText
   - Bullet
   - Boundary
+  - ScoreText
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public GameController gameController;
     [SerializeField] private int health = 5;
     
     // Start is called before the first frame update
@@ -16,7 +17,11 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         if (health <= 0)
+        {
             Destroy(gameObject);
+            // add score
+            gameController.score += 5;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
