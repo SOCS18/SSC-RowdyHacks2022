@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class TimerController : MonoBehaviour
 {
-    public int score = 0;
-    public Text scoreText;
-    
+    [SerializeField] private float timer = 5;
+    public Text timerText;
+
     // Start is called before the first frame update
     void Start()
     {
-        Application.targetFrameRate = 144;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score:\n" + score;
+        if (timer > 0)
+            timer -= Time.deltaTime;
+        timerText.text = "Time: " + (int)timer;
     }
 }

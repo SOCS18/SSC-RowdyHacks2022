@@ -17,6 +17,6 @@ public class FPSCounter : MonoBehaviour
     void Update()
     {
         float fps = 1 / Time.unscaledDeltaTime;
-        framesDisplay.text = "" + fps;
+        framesDisplay.text = "" + (int)fps;
     }
 }
