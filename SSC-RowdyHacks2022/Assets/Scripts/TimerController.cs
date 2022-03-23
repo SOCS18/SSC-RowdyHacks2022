@@ -7,8 +7,10 @@ public class TimerController : MonoBehaviour
 {
     [SerializeField] private float timer = 5;
     [SerializeField] private bool isCountingDown = false;
+    public GameController gameController;
     public GameObject endMenu;
     public Text timerText;
+    public Text finalScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -40,5 +42,9 @@ public class TimerController : MonoBehaviour
     {
         Debug.Log("Timer is done");
         endMenu.SetActive(true);
+        if (gameController.score == 0)
+            finalScoreText.text = "Oh No!\nYou didn't destroy the capsule!";
+        else
+            finalScoreText.text = "Congratulations!\nYou destroyed the capsule";
     }
 }
