@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    [SerializeField] private float timer = 5;
-    [SerializeField] private bool isCountingDown = false;
-    public GameController gameController;
+    [SerializeField] private float timer = 5;               // set amount of seconds in timer
+    [SerializeField] private bool isCountingDown = false;   // checking whether or not timer is counting down
+    public GameController gameController;                   // borrowing elements from GameController script
     public GameObject endMenu;
     public Text timerText;
     public Text finalScoreText;
@@ -24,17 +24,19 @@ public class TimerController : MonoBehaviour
     {
         if (isCountingDown)
         {
+            // if timer isn't at zero, it'll decrease the time
             if (timer > 0)
             {
-                timer -= Time.deltaTime;
+                timer -= Time.deltaTime;    // decreases timer by 1 each second
             }
             else
             {
-                DisplayEndMenu();
+                DisplayEndMenu();           // calls method that has end menu pop up
                 isCountingDown = false;
             }
         }
 
+        // will be displaying timer to text
         timerText.text = "Time: " + (int)timer;
     }
 

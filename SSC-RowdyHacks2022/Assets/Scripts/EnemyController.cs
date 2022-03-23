@@ -16,8 +16,12 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (health <= 0)
         {
+            // set health to zero
+            health = 0;
+            // destroys enemy
             Destroy(gameObject);
             // add score
             gameController.score += 5;
@@ -26,6 +30,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // if enemy gets hit by bullet, enemy loses health
         if (other.gameObject.tag == "Bullet")
         {
             health -= 1;

@@ -11,12 +11,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // restrict framerate to a set number
         Application.targetFrameRate = 144;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // assign score integer to appropriate text
         scoreText.text = "Score:\n" + score;
     }
 }

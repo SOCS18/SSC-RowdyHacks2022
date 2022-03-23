@@ -13,15 +13,18 @@ public class InBoundsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // assign player to player GameObject
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        // assign player x and z position to appropriate variables
         playerXPos = player.transform.position.x;
         playerZPos = player.transform.position.z;
 
+        // if player moves outside set boundaries, it'll be stopped in its place
         if (playerXPos > screenWidth)
         {
             player.transform.position = new Vector3(screenWidth, player.transform.position.y, player.transform.position.z);
