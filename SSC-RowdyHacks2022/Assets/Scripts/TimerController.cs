@@ -42,7 +42,6 @@ public class TimerController : MonoBehaviour
 
     void DisplayEndMenu()
     {
-        Debug.Log("Timer is done");
         endMenu.SetActive(true);
         if (gameController.score == 0)
             finalScoreText.text = "Oh No!\nYou didn't destroy the capsule!";
