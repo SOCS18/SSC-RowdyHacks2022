@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
 
     void DisplayEndMenu()
     {
+        Time.timeScale = 0;
         endMenu.SetActive(true);
         finalScoreText.text = "Congratulations!\nYou destroyed the capsule";
     }
