@@ -43,6 +43,7 @@ public class TimerController : MonoBehaviour
     void DisplayEndMenu()
     {
         endMenu.SetActive(true);
+        Time.timeScale = 0f;
         if (gameController.score == 0)
             finalScoreText.text = "Oh No!\nYou didn't destroy the capsule!";
         else
