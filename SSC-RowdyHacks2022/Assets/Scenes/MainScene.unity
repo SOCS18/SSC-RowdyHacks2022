@@ -476,7 +476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &538754114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1021,7 +1021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962392346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.71, y: 0, z: 0}
+  m_LocalPosition: {x: -7.96, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1729,6 +1729,14 @@ PrefabInstance:
     - target: {fileID: 2074431804751179584, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074431804751179585, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074431804751179585, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2074431804751179588, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
       propertyPath: m_RootOrder

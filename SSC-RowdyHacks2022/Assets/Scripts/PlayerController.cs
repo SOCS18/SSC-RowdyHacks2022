@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject bullet = Instantiate(projectile, startProjectile.position, Quaternion.identity);
+
             bullet.GetComponent<Rigidbody>().AddForce(transform.right * projSpeed);
         }
 
