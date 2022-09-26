@@ -36,8 +36,7 @@ public class PlayerController : MonoBehaviour
         // shooter detector
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject bullet;
-            bullet = Instantiate(projectile, startProjectile.position, Quaternion.identity);
+            GameObject bullet = Instantiate(projectile, startProjectile.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody>().AddForce(transform.right * projSpeed);
         }
 

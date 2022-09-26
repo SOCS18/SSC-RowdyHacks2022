@@ -29,14 +29,17 @@ public class InBoundsController : MonoBehaviour
         {
             player.transform.position = new Vector3(screenWidth, player.transform.position.y, player.transform.position.z);
         }
+
         if (playerZPos > screenHeight)
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, screenHeight);
         }
+
         if (playerXPos < -screenWidth)
         {
             player.transform.position = new Vector3(-screenWidth, player.transform.position.y, player.transform.position.z);
         }
+
         if (playerZPos < -screenHeight)
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -screenHeight);
