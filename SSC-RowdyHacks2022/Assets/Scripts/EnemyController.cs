@@ -5,10 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public GameController gameController;
-    public TimerController timerController;
     [SerializeField] private int health = 5;
-
-    public GameObject enemyPrefab;
 
     // Update is called once per frame
     void Update()
@@ -36,8 +33,5 @@ public class EnemyController : MonoBehaviour
 
         // add score
         gameController.score += 5;
-
-        // add 1 second to timer
-        timerController.timer++;
     }
 }
