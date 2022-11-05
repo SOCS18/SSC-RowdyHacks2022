@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    [SerializeField] private float timer;                   // set amount of seconds in timer
+    public float timer;                                     // set amount of seconds in timer
     [SerializeField] private bool isCountingDown = false;   // checking whether or not timer is counting down
     public GameController gameController;                   // borrowing elements from GameController script
     public GameObject endMenu;

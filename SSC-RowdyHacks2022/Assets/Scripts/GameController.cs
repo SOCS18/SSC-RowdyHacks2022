@@ -21,17 +21,5 @@ public class GameController : MonoBehaviour
     {
         // assign score integer to appropriate text
         scoreText.text = "Score:\n" + score;
-
-        if (score > 0)
-        {
-            DisplayEndMenu();
-        }
-    }
-
-    void DisplayEndMenu()
-    {
-        Time.timeScale = 0;
-        endMenu.SetActive(true);
-        finalScoreText.text = "Congratulations!\nYou destroyed the capsule";
     }
 }

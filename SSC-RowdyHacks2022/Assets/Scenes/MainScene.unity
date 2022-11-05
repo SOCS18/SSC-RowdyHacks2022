@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1730,21 +1730,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2074431804751179585, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074431804751179585, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2074431804751179588, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2074431804751179588, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2074431804751179588, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1786,5 +1778,9 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 739498979}
+    - target: {fileID: 6701642473225505936, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}
+      propertyPath: timerController
+      value: 
+      objectReference: {fileID: 1592769581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb8eb01ff65936145a0d4959fafaa9f1, type: 3}

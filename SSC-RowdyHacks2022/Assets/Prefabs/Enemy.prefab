@@ -110,4 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
+  timerController: {fileID: 0}
   health: 5
+  enemyPrefab: {fileID: 2074431804751179584}

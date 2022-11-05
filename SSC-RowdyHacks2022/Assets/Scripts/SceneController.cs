@@ -10,12 +10,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void RestartGame()
-    {
-        Debug.Log("Restarting Level");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void QuitGameButton()
     {
         // if user is in the unity editor, scene stops playing
